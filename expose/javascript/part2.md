@@ -1,0 +1,21 @@
+Question 1: '3' is printed out at line 12. This is because *i* is declared with the **var** keyword, meaning *i* is not loop local so it can be accessed outside of the loop that it is defined in. As such, the final value of *i* at the end of the loop is printed, which is 3 due to the provided list in line 19.
+
+Question 2: '150' is printed out at line 13. Similar to question 1, notice that the variable in question **discountedPrice** is declared with the *var* keyword. This means that discountedPrice is either function-scoped or global-scoped. In the context of this code, **discountedPrice** is function-scoped. Since line 13 is inside of the function, the code prints the variable that is assigned at the end of the for loop, which is what the variable is by the time line 13 is run.
+
+Question 3: '150' is printed at line 14. This is similar to question 3, as **finalPrice** is declared with the *var* keyword. Hence, it is visible to line 14 which is still inside of the function that **finalPrice** is declared in. 150 is what the variable is defined as by the time line 14 is run.
+
+Question 4: '[50, 100, 150]' will be returned. This code causes no errors, as just like Question 3, **discounted** is declared inside of the function and is can be seen by the return statement of the same function. What **discounted** ends up being by the time of the return statement is an array of the initial prices having the discount being applied to them. In this case, a 50% discount is put on the items in the array, halving the prices which is returned.
+
+Question 5: The code causes an error. This is due to the fact that, unlike in Question 1, *i* is declared with the **let** keyword meaning that the scope is limited to the for loop. As such, *i* will not be defined outside of it, meaning line 12 does not have access to it and gives an error.
+
+Question 6: The code causes an error in a similar fashion to Question 5. The variable in question, **discountedPrice**, is declared with the **let** keyword inside of a for loop. Due to the fact that line 13 attempts to use this variable outside of the for loop, an error occurs since the variable's scope is not outside of the function.
+
+Question 7: '150' will be printed, which is the same case as its counterpart in question 3. This is because even though the variable is defined with the **let** keyword as the previous two questions, the actual declaration takes place outside of the for loop and at the base of the funtion. Hence, the variable has a function-scope and can be accessed in line 14, which makes the print to what we see.
+
+Question 8: '[50, 100, 150]' will be returned just like as in Question 4. The only difference being that the variables are declared with the **let** keyword, but this has no affect on the return value itself. The **discounted** variable is declared with **let**, yet since it is declared at the base of the function, the return statement has no issue with running it, and the code works as intended. 
+
+Question 9: The code causes an error. line 11 attemps to print out the value of *i*, but this variable has been declared with **let**. Due to this, the scope is limited to the for loop code block but line 11 is outside of this. As a result, line 11 does not have visibility to the definition of *i*, giving an error.
+
+Question 10: '3' is printed out. Line 12 looks for the variable **length** which is defined with a const keyword at the same level of the function as line 12. This means that this line has access/visibility to the variable. The only constraint that this variable has is that it is a const, meaning that it cannot be reassigned at all during the rest of the code. This is not a problem, as **length** is never reassigned to another value. Hence, the code prints out prices.length which by looking at line 17 is just 3.
+
+Question 11: '[50, 100, 150]' is returned. Although the for loop was changed since the previous question that asked the same thing, the core functinality remains the same. The discount is applied in a manner to the prices in the array, and a new array with these discounted prices are returned. The discount is essentially 50% off, so the prices are cut in half. This is what is returned in the function return statement.
