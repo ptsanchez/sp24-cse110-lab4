@@ -19,3 +19,22 @@ Question 9: The code causes an error. line 11 attemps to print out the value of 
 Question 10: '3' is printed out. Line 12 looks for the variable **length** which is defined with a const keyword at the same level of the function as line 12. This means that this line has access/visibility to the variable. The only constraint that this variable has is that it is a const, meaning that it cannot be reassigned at all during the rest of the code. This is not a problem, as **length** is never reassigned to another value. Hence, the code prints out prices.length which by looking at line 17 is just 3.
 
 Question 11: '[50, 100, 150]' is returned. Although the for loop was changed since the previous question that asked the same thing, the core functinality remains the same. The discount is applied in a manner to the prices in the array, and a new array with these discounted prices are returned. The discount is essentially 50% off, so the prices are cut in half. This is what is returned in the function return statement.
+
+Question 12:
+A: student.name
+B: student['Grad Year']
+C: student.greeting()
+D: student['Favorite Teacher'].name
+E: student.courseLoad[0]
+
+Question 13:
+A. '3' + 2 outputs '32' because integers maps to their string representation. As such, the two strings '3' and '2' are concatenated together. 
+B. '3' - 2 outputs 1. With the '-' operator, the string is converted to its integer counterpart. This expression is essentially 3-2, which is 1.
+C. 3 + null outputs 3. null is convered to its integer countpart which is 0. This expression becomes 3 + 0, which equates to 3.
+D. '3' + null outputs '3null'. '3' is a string, so null is converted to the string 'null'. The + operator serves as a concatenation between two strings, which creates the output.
+E. true + 3 outputs 4. Javascript treats true as a 1 when using the + with a number. As such, this expression becomes 1 + 3 which equals 4.
+F. false + null outputs 0. With the use of the + operator, Javascript converts the boolean to a 0 as well as null to a 0. This becomes 0 + 0 which is trivially 0.
+G. '3' + undefined outputs '3undefined'. '3' is a string alongside the + operator, so undefined becomes the string 'undefined'. Hence the two strings '3' and 'undefined' are concatenated together to make the output.
+H. '3' - undefined outputs NaN. Contrary to the previous expression, there is no way for JavaScript to subtract undefined, so NaN is outputted.
+
+Question 14: 
