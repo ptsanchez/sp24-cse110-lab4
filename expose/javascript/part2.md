@@ -38,3 +38,17 @@ G. '3' + undefined outputs '3undefined'. '3' is a string alongside the + operato
 H. '3' - undefined outputs NaN. Contrary to the previous expression, there is no way for JavaScript to subtract undefined, so NaN is outputted.
 
 Question 14: 
+A. '2' > 1 outputs true. This > operator between a string and a number converts the string to its 
+B. '2' < '12' outputs false. When comparing two strings, JavaScript compares the first characters of both strings. Since 1 comes before 2, the comparison 2 < 1 is false lexicographically.
+C. 2 == '2' outputs true. '2' is converted to its number version 2, so this experession becomes 2 == 2. This is true.
+D. 2 === '2' outputs false. The === operator compares if the two comparators on both side of the operator are equal in terms of value and type. Since the number two is not the same as the string '2', this outputs false. 
+E. true == 2 outputs false. true is converted to its number representation, 1, when comparing it with the number 2. 1 == 2 is false. 
+F. true === Boolean(2) outputs false. Boolean(2) does not return the same type of boolean true, which is why is equates to false.
+
+Question 15: 
+The == operator can be called a more loose comparison, as like we have seen above, it can convert many different types to other types for the comparison to make sense. On the other hand, the === operator is more strict such that the types are taken into account immediately when doing the comparison. For instance, if a string was compared with a number, false would be outputted no matter what since they are not of the same type.
+
+Question 17: The result will be '[2, 3, 6]'. The modifyArray function takes in both an array and another function which will be applied to each of the elements in the array parameter. In the modifyArray function, a for loop is used to iterate throughout the elements inside the given function. The doSomething function multiples its input by two, so as a whold the modifyArray function multipies all of the elements in the input array with the doSomething function.
+
+Question 19: The code runs the function. The function first outputs 1 to the console. The next line says to output 2 to the console but in 1 second. In essence, the function schedules 2 to the console for a second when that line is run. In the mean time, the next line is run, which says to output 3 to the console in 0 second time aka instantly. However, JavaScript inherently has a minimum delay with the setTimeout function, so the next line is outputted before this output is put in the console. The next and last line of the function simply outputs 4 to the console. All of this is done before that 1 second has passed, so after all of these lines have run then does 2 get outputted to the console. The output is in the order of: 1, 4, 3, 2.
+
