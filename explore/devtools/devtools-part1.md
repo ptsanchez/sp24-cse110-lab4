@@ -29,3 +29,4 @@ Navigate to the Initiator tab now and answer the last question
     - function fetchData() {
         fetch('./citylots.json')
         } 
+        

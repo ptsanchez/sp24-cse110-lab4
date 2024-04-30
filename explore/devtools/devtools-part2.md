@@ -1,0 +1,3 @@
+1. The bug was that the data type of **result** is a string. This means that result is actually just concatonating the values of **num1** and **num2** instead of arithmetically adding the two values.
+
+2. To fix this bug, I would do a type conversion of the data types for **num1** and **num2**. This would make **result** be the addition of two numbers, so result would calculate the artithmetic after adding num1 and num2.
